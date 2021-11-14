@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31825.309
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAcessLibrary", "DataAcessLibrary\DataAcessLibrary.csproj", "{E29F5782-9AD8-46AC-B9FD-0259B1C550CE}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQLHotelManagementDB", "SQLHotelManagementDB\SQLHotelManagementDB.sqlproj", "{4F94908E-006A-4744-BAE3-E343D4FBA782}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E29F5782-9AD8-46AC-B9FD-0259B1C550CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E29F5782-9AD8-46AC-B9FD-0259B1C550CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E29F5782-9AD8-46AC-B9FD-0259B1C550CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E29F5782-9AD8-46AC-B9FD-0259B1C550CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F94908E-006A-4744-BAE3-E343D4FBA782}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F94908E-006A-4744-BAE3-E343D4FBA782}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F94908E-006A-4744-BAE3-E343D4FBA782}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4F94908E-006A-4744-BAE3-E343D4FBA782}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F94908E-006A-4744-BAE3-E343D4FBA782}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F94908E-006A-4744-BAE3-E343D4FBA782}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C19CB76-ABA6-4D36-B9B1-4FD5FA270E63}
+	EndGlobalSection
+EndGlobal
