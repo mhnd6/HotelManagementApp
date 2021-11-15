@@ -2,8 +2,8 @@
 (
 	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
     [RoomId] INT NOT NULL, 
-    [StartDate] DATETIME2 NOT NULL, 
-    [EndDate] DATETIME2 NOT NULL, 
+    [StartDate] DATE NOT NULL, 
+    [EndDate] DATE NOT NULL, 
     [GuestId] INT NOT NULL, 
     [TotalCost] MONEY NOT NULL, 
     [CheckedIn] BIT NOT NULL DEFAULT 0, 
