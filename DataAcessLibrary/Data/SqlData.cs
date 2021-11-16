@@ -7,7 +7,7 @@ using System.Text;
 
 namespace DataAcessLibrary.Data
 {
-    public class SqlData
+    public class SqlData : IDataBaseData
     {
         private readonly ISqlDataAccess db;
         private const string connectionStringName = "SqlDB";
@@ -18,10 +18,10 @@ namespace DataAcessLibrary.Data
         }
         public List<RoomTypeModel> GetAvailableRoomTypes(DateTime startDate, DateTime endDate)
         {
-           return db.LoadData<RoomTypeModel, dynamic>("dbo.spRoomTypes_GetAvailableTypes",
-                new { startDate, endDate},
-                connectionStringName,
-                true);
+            return db.LoadData<RoomTypeModel, dynamic>("dbo.spRoomTypes_GetAvailableTypes",
+                 new { startDate, endDate },
+                 connectionStringName,
+                 true);
         }
 
         public void BookGuest(string firstName,
@@ -49,14 +49,39 @@ namespace DataAcessLibrary.Data
                                                                              true);
 
             db.SaveData("dbo.spBookings_insert",
-                                      new { roomId = availableRooms.First().Id, 
-                                              guestId = guest.Id, 
-                                              startDate = startDate,
-                                              endDate = endDate, 
-                                              totalCost = timeStying.Days * roomType.Price
-                                          },
+                                      new
+                                      {
+                                          roomId = availableRooms.First().Id,
+                                          guestId = guest.Id,
+                                          startDate = startDate,
+                                          endDate = endDate,
+                                          totalCost = timeStying.Days * roomType.Price
+                                      },
                                       connectionStringName,
                                       true);
         }
+
+        public List<BookingModel> SearchBookings(string lastName)
+        {
+            return db.LoadData<BookingModel, dynamic>("dbo.spBookings_Search",
+                                               new
+                                               {
+                                                   lastName,
+                                                   startDate = DateTime.Now.Date
+                                               },
+                                               connectionStringName,
+                                               true);
+        }
+
+        public void CheckInGuest(int bookingId)
+        {
+            db.SaveData("spBookings_CheckedIn",
+                new { Id = bookingId },
+                connectionStringName,
+                true);
+
+        }
+
+
     }
 }

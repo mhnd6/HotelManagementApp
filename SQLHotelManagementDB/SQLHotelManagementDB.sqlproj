@@ -67,12 +67,12 @@
     <Build Include="dbo\Tables\Rooms.sql" />
     <Build Include="dbo\Tables\Guests.sql" />
     <Build Include="dbo\Tables\Bookings.sql" />
-    <Build Include="dbo\spGuests_SaveGuest.sql" />
-    <Build Include="dbo\spBookings_BookGuest.sql" />
     <Build Include="dbo\Store Procedures\spRoomTypes_GetAvailableTypes.sql" />
     <Build Include="dbo\Store Procedures\spGuest_Insert.sql" />
     <Build Include="dbo\Store Procedures\spRooms_GetAvailableRooms.sql" />
     <Build Include="dbo\Store Procedures\spBookings_insert.sql" />
+    <Build Include="dbo\Store Procedures\spBookings_Search.sql" />
+    <Build Include="dbo\Store Procedures\spBookings_CheckedIn.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
