@@ -82,6 +82,15 @@ namespace DataAcessLibrary.Data
 
         }
 
+        public RoomTypeModel GetRoomTypeById(int id)
+        {
+            return db.LoadData<RoomTypeModel, dynamic>(
+                "dbo.spRoomTypes_GetById",
+                new { id },
+                connectionStringName,
+                true).FirstOrDefault();
+        }
+
 
     }
 }
