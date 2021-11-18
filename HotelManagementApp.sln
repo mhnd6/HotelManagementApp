@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAcessLibrary", "DataAce
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQLHotelManagementDB", "SQLHotelManagementDB\SQLHotelManagementDB.sqlproj", "{4F94908E-006A-4744-BAE3-E343D4FBA782}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelWebApp", "HotelWebApp\HotelWebApp.csproj", "{6816E3FA-5144-40AF-97BE-F96F86A088C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelWebApp", "HotelWebApp\HotelWebApp.csproj", "{6816E3FA-5144-40AF-97BE-F96F86A088C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
