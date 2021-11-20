@@ -28,6 +28,7 @@ namespace HotelWebApp
             services.AddRazorPages();
             services.AddTransient<IDataBaseData, SqlData>();
             services.AddTransient<ISqlDataAccess, SqlDataAccess>();
+            services.AddTransient<ISqliteDataAccess, SqliteDataAccess>();
             //Dependcy injection, create instance for each connection
             //everyone has thier own connection
         }
