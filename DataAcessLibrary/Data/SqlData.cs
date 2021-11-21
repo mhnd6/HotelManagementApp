@@ -14,6 +14,7 @@ namespace DataAcessLibrary.Data
 
         public SqlData(ISqlDataAccess db)
         {
+            // The ISqlDataAccess will be through dependcy injection
             this.db = db;
         }
         public List<RoomTypeModel> GetAvailableRoomTypes(DateTime startDate, DateTime endDate)

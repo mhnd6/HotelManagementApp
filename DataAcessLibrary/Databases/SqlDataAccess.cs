@@ -11,18 +11,20 @@ namespace DataAcessLibrary.Databases
 {
     public class SqlDataAccess : ISqlDataAccess
     {
-        private readonly IConfiguration config;
+        //_config means we dont wanna write to it
+        private readonly IConfiguration _config;
 
         public SqlDataAccess(IConfiguration config)
         {
-            this.config = config;
+            this._config = config;
         }
+
         public List<T> LoadData<T, U>(string sqlStatment,
                                       U parameters,
                                       string connectionStringName,
                                       bool isStoredProcedure = false)
         {
-            string connectionString = config.GetConnectionString(connectionStringName);
+            string connectionString = _config.GetConnectionString(connectionStringName);
             CommandType commandType = CommandType.Text;
 
             if (isStoredProcedure)
@@ -36,12 +38,13 @@ namespace DataAcessLibrary.Databases
                 return rooms;
             }
         }
+
         public void SaveData<T>(string sqlStatment,
                                 T parameters,
                                 string connectionStringName,
                                 bool isStoredProcedure = false)
         {
-            string connectionString = config.GetConnectionString(connectionStringName);
+            string connectionString = _config.GetConnectionString(connectionStringName);
             CommandType commandType = CommandType.Text;
 
             if (isStoredProcedure)
