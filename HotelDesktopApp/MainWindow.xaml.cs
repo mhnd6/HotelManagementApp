@@ -34,7 +34,6 @@ namespace HotelDesktopApp
             InitializeComponent();
             this.db = db;
             
-       
         }
 
         private void searchBookings_Click(object sender, RoutedEventArgs e)

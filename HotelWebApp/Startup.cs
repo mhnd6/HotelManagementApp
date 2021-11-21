@@ -26,7 +26,20 @@ namespace HotelWebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddTransient<IDataBaseData, SqlData>();
+            string dbCoice = Configuration.GetValue<string>("DatabaseChoice").ToLower();
+            
+            if (dbCoice == "sql")
+            {
+                services.AddTransient<IDataBaseData, SqlData>();
+            }
+            else if (dbCoice == "sqlite")
+            {
+                services.AddTransient<IDataBaseData, SqliteData>();
+            }
+            else
+            {
+                services.AddTransient<IDataBaseData, SqlData>();
+            }
             services.AddTransient<ISqlDataAccess, SqlDataAccess>();
             services.AddTransient<ISqliteDataAccess, SqliteDataAccess>();
             //Dependcy injection, create instance for each connection

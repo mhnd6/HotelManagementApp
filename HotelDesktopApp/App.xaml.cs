@@ -29,8 +29,6 @@ namespace HotelDesktopApp
             services.AddTransient<CheckIn>();
             services.AddTransient<ISqlDataAccess, SqlDataAccess>();
             services.AddTransient<ISqliteDataAccess, SqliteDataAccess>();
-            services.AddTransient<IDataBaseData, SqlData>();
-
 
             var builder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
@@ -39,6 +37,25 @@ namespace HotelDesktopApp
             IConfiguration config = builder.Build();
 
             services.AddSingleton(config);
+
+            string dbCoice = config.GetValue<string>("DatabaseChoice").ToLower();
+
+            if (dbCoice == "sql")
+            {
+                //Here we mapped the interface to SqlData type and Sql data asked for
+                //ISqlDataAccess so upove we mapped ISqlDataAccess to SqlDataAccess type
+                //We tell them what you will get
+
+                services.AddTransient<IDataBaseData, SqlData>();
+            }
+            else if (dbCoice == "sqlite")
+            {
+                services.AddTransient<IDataBaseData, SqliteData>();
+            }
+            else
+            {
+                services.AddTransient<IDataBaseData, SqlData>();
+            }
 
             serviceProvider = services.BuildServiceProvider();
             var mainWindow = serviceProvider.GetService<MainWindow>();
