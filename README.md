@@ -22,3 +22,7 @@ Description
     - The web app is to allow guests to search and book rooms.
   - Hotel Desktop Application
     - The Desktop app is to allow employees to search for bookings and check-in guests.
+
+##Screen Shots
+
+<img src="https://github.com/mhnd6/HotelManagementApp/blob/master/ScreenShots/Search.png" alt="maze pic" width="300" height="300">
