@@ -1,5 +1,9 @@
 # Hotel Management App
 
+Motivation 
+> This project is part of learning C# fundamentals journey.
+
+Description
 > A minimum value project for hotel management that allows guests to search for rooms based on certain dates and then book it, also employees can search for bookings and check-in guests.
 
 
