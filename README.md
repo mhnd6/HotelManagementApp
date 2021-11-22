@@ -23,6 +23,12 @@ Description
   - Hotel Desktop Application
     - The Desktop app is to allow employees to search for bookings and check-in guests.
 
-##Screen Shots
-
-<img src="https://github.com/mhnd6/HotelManagementApp/blob/master/ScreenShots/Search.png" alt="maze pic" width="300" height="300">
+## Screen Shots
+- Search for rooms
+<img src="https://github.com/mhnd6/HotelManagementApp/blob/master/ScreenShots/Search.png" alt="maze pic" width="600" height="300">
+- Book a room 
+<img src="https://github.com/mhnd6/HotelManagementApp/blob/master/ScreenShots/Book.png" alt="maze pic" width="500" height="300">
+- Search for bookings
+<img src="https://github.com/mhnd6/HotelManagementApp/blob/master/ScreenShots/Search%20for%20Bookings.png" alt="maze pic" width="600" height="300">
+- Check In
+<img src="https://github.com/mhnd6/HotelManagementApp/blob/master/ScreenShots/Confirm.png" alt="maze pic" width="400" height="300">
