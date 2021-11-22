@@ -27,8 +27,8 @@ Description
 - Search for rooms
   - <img src="https://github.com/mhnd6/HotelManagementApp/blob/master/ScreenShots/Search.png" alt="maze pic" width="600" height="300">
 - Book a room 
-  - <img src="https://github.com/mhnd6/HotelManagementApp/blob/master/ScreenShots/Book.png" alt="maze pic" width="500" height="300">
+  - <img src="https://github.com/mhnd6/HotelManagementApp/blob/master/ScreenShots/Book.png" alt="maze pic" width="600" height="300">
 - Search for bookings
   - <img src="https://github.com/mhnd6/HotelManagementApp/blob/master/ScreenShots/Search%20for%20Bookings.png" alt="maze pic" width="600" height="300">
 - Check In
-  - <img src="https://github.com/mhnd6/HotelManagementApp/blob/master/ScreenShots/Confirm.png" alt="maze pic" width="400" height="300">
+  - <img src="https://github.com/mhnd6/HotelManagementApp/blob/master/ScreenShots/Confirm.png" alt="maze pic" width="600" height="300">
